@@ -9,7 +9,7 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+      <ion-title size="large">Pagina principal</ion-title>
     </ion-toolbar>
   </ion-header>
 
@@ -24,17 +24,19 @@
     <ion-card-content>
      <ion-list>
       <ion-item>
-       <ion-input label="Usuario" labelPlacement="floating" placeholder="ingrese su usuario"> 
+       <ion-input label="Usuario" [(ngModel)]="user.usuario" labelPlacement="floating" placeholder="ingrese su usuario"> 
        </ion-input>
       </ion-item>
       <ion-item> 
-        <ion-input type="password" label="Contraseña" labelPlacement="floating" placeholder="ingrese su contraseña">
+        <ion-input type="password"  [(ngModel)]="user.password" label="Contraseña" labelPlacement="floating" placeholder="ingrese su contraseña">
           <ion-input-password-toggle slot="end"></ion-input-password-toggle> 
         </ion-input>
       </ion-item>
-      <ion-item>
-        <ion-button shape="round" id="btnLogin">Ingrese</ion-button>
-      </ion-item>
+      <div id="cuadroMsj"> 
+        <ion-label>{{msj}}</ion-label>
+      </div>
+        <ion-button shape="round" (click)="conectar()" id="btnLogin">Conectar</ion-button>
+      
 
      </ion-list>
     </ion-card-content>

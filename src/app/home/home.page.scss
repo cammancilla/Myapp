@@ -41,12 +41,16 @@ ion-card {
 }
 
 #logoLogin{
-  width:  200px;
-  height: 100px;
+  
+  width: 150px;
+  height: 150px;
   margin: auto;
-  border-radius: 75%;
-  padding-top: 5%;
-  padding-bottom: 5%;  
+  margin-top: 10%;
+  margin-bottom: 5%;
+  object-fit: cover;
+  border: 2px solid white;
+  border-radius: 50%;
+  overflow: hidden;
 }
 
 #btnLogin{

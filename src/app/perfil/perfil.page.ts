@@ -10,7 +10,16 @@ export class PerfilPage implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
+  user = {
+   usuario: '',
+   password: '',
+  };
+
+  nombreUsuario = '';
+  ngOnInit() {}
+  ngAfterContentInit(){
+    this.user = history.state.user;
+    this.nombreUsuario = this.user.usuario;
   }
 
 }
