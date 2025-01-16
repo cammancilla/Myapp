@@ -14,14 +14,32 @@ export class HomePage {
   };
 
   msj = '';
+  carga= false;
   constructor(private router: Router, private animation: AnimationController) {}
 
   conectar() {
     if (this.user.usuario.length > 0 && this.user.password.length > 0) {
+      if(
+        this.user.usuario == 'walter' &&
+        this.user.password == 'pass1234'
+      ){
       let navigationExtras: NavigationExtras = {
         state: { user: this.user },
       };
-      this.router.navigate(['/perfil'], navigationExtras);
+      this.carga= true;
+      this.msj= 'Conexion Exitosa';
+
+      setTimeout(()=>{
+        this.router.navigate(['/perfil'],navigationExtras);
+        this.msj = '';
+        this.carga = false;
+
+      },3000);
+
+     }else{
+      this.msj = 'Credenciales erroneas';
+     }
+    
     } else {
       this.msj = 'Credenciales no pueden estar vacias';
     }

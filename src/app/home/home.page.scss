@@ -63,3 +63,16 @@ ion-card {
   width: 80%;
 
 }
+
+#seccionCarga {
+  padding: 2%;
+  margin-left: 25%;
+  margin-right: 25%;
+  margin-top: 5%;
+}
+
+#seccionCarga mat-spinner {
+  width: 50% !important;
+  margin: auto;
+  margin-top: 3%;
+}
