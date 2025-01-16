@@ -1,3 +1,4 @@
+
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>Perfil</ion-title>
@@ -12,8 +13,28 @@
   </ion-header>
 
   <div id="container">
-    <ion-title>Perfil de usuario</ion-title>
-    <br>
-    <ion-label>Bienvenido {{nombreUsuario}}</ion-label>  
+    <ion-card>
+      <ion-card-header>
+    
+  </ion-card-header>
+    
+  <ion-card-content>  
+    <ion-label>Bienvenido {{nombreUsuario}} <br> </ion-label>  
+    <ion-label>Gracias por haber iniciado sesión en TeLlevoApp<br> Escoge una opción para empezar: </ion-label> <br>
+
+    <div id="seccionProgramar">
+    <ion-button shape="round" color="tertiary" id="btnProgramar"> Programar Viaje</ion-button><br>
+    </div>
+    <div id="seccionVerficar">
+    <ion-button shape="round" color="tertiary" id="btnVerficar">Verificar vehiculos con capacidad </ion-button>
+    </div>
+  </ion-card-content>
+  </ion-card>
   </div>
 </ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-title> TeLlevoApp </ion-title>
+  </ion-toolbar>
+</ion-footer>
