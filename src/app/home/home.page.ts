@@ -30,7 +30,7 @@ export class HomePage {
       this.msj= 'Conexion Exitosa';
 
       setTimeout(()=>{
-        this.router.navigate(['/perfil'],navigationExtras);
+        this.router.navigate(['/inicio'],navigationExtras);
         this.msj = '';
         this.carga = false;
 
